@@ -10,7 +10,7 @@ module.exports = {
  const embed = new Discord.MessageEmbed()
  .setTitle(`🖼️│Avatar de ${user.tag}`)
  .setImage(user.displayAvatarURL({ size: 4096, dinamyc: true, format: 'png'}))
- .setColor(RANDOM)
+ .setColor("RANDOM")
  .setFooter(`${message.author.tag}`, message.author.displayAvatarURL())
  message.channel.send(embed)
   
