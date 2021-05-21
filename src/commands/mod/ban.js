@@ -7,12 +7,12 @@ module.exports = {
   run: async(client, message, args) => {
     var a = message.id
     
-    if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(`**<:erro:776925019204747276> │ \`${message.author}\`, Você não Possui a Permissão \`BAN_MEMBERS\`.**`)
+    if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(`**<:erro:776925019204747276> │ \`${message.author}\`, Você não Possui a Permissão \`BAN_MEMBERS\`.**`)
     
     const user = message.mentions.users.first() || client.users.cache.get(args[0])
     
     
-    if (!user) return message.reply(`**<:erro:776925019204747276> │ ${message.author}, Não encontrei esde usuário.**`)
+    if (!user) return message.channel.send(`**<:erro:776925019204747276> │ ${message.author}, Não encontrei esde usuário.**`)
     
     const motivo = args.slice(1).join('')
     
