@@ -3,6 +3,6 @@ module.exports = {
   description: 'Veja meu ping',
   aliases: [''],
   run: async(client, message, args) => {
-    message.channel.send(`**🏓 | ${message.author}, meu ping é de ``${client.ws.ping}``.**`)
+    message.channel.send(`**🏓 | Meu ping é de ``${client.ws.ping}``.**`)
   }
 }
