@@ -20,9 +20,9 @@ module.exports = {
     
     const embed = new Discord.MessageEmbed()
     .setTitle('**<:ban2:845271291702542336> │ Banimento**')
-    .addField('**<:DE_IconMembers:838442250933108767> │ Usuário:**', `${user.tag}`)
-    .addField('**<:emoji_9:790927969165508608> │ Usuário que baniu:**', `${message.author}`)
-    .addField('**<:mdEdit:780822135958142999> │ Motivo:**', `${motivo}`)
+    .addField('**<:DE_IconMembers:838442250933108767> │ Usuário:**', user.tag)
+    .addField('**<:emoji_9:790927969165508608> │ Usuário que baniu:**', message.author)
+    .addField('<:mdEdit:780822135958142999> │ Motivo:**', motivo)
     
     message.channel.messages.fetch(a).then(msg => msg.delete({ timeout: 1000 }));
     
