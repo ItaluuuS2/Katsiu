@@ -12,7 +12,7 @@ module.exports = {
     const user = message.mentions.users.first() || client.users.cache.get(args[0])
     
     
-    if (!user) return message.channel.send(`**<:erro:776925019204747276> │ ${message.author}, Não encontrei esde usuário.**`)
+    if (!user) return message.channel.send(`**<:erro:776925019204747276> │ ${message.author}, Não encontrei esse usuário.**`)
     
     const motivo = args.slice(1).join('')
     
@@ -20,9 +20,9 @@ module.exports = {
     
     const embed = new Discord.MessageEmbed()
     .setTitle('**<:ban2:845271291702542336> │ Banimento**')
-    .addField('**<:DE_IconMembers:838442250933108767> │ Usuário:**', user, true)
-    .addField('**<:emoji_9:790927969165508608> │ Usuário que baniu:**', message.author, true)
-    .addField('**<:mdEdit:780822135958142999> │ Motivo:**', motivo, true)
+    .addField('**<:DE_IconMembers:838442250933108767> │ Usuário:**', `${user.tag}`)
+    .addField('**<:emoji_9:790927969165508608> │ Usuário que baniu:**', `${message.author}`)
+    .addField('**<:mdEdit:780822135958142999> │ Motivo:**', `${motivo}`)
     
     message.channel.messages.fetch(a).then(msg => msg.delete({ timeout: 1000 }));
     
