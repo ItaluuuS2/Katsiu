@@ -9,7 +9,7 @@ module.exports = {
     
     if (!message.member.hasPermission('BAN_MEMBERS')) return message.reply(`**<:erro:776925019204747276> │ \`${message.author}\`, Você não Possui a Permissão \`BAN_MEMBERS\`.**`)
     
-    const user = message.mentions.user.first() || client.users.cache.get(args[0])
+    const user = message.mentions.users.first() || client.users.cache.get(args[0])
     
     
     if (!user) return message.reply(`**<:erro:776925019204747276> │ ${message.author}, Não encontrei esde usuário.**`)
